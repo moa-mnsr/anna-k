@@ -1,0 +1,188 @@
+@import "/css/reset.css";
+@import "/css/typography.css";
+
+body {
+    height: 100vh;
+    width:  100vw;
+
+    margin: 0;
+    overflow-x: hidden;
+
+    background-color: #e5e5e5;
+    color: #050505;
+    
+    font-family: "Happy Times";
+    font-size: 24px;
+    line-height: 1.5; 
+     
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: -60vw;
+    width: 60vw;
+    height: 100vh;
+    background-color: #050505;
+    color: #e5e5e5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    transition: left 0.5s;
+    z-index: 2;
+}
+    
+nav.open {
+    left: 0;
+}
+
+nav a:nth-child(1) {
+    border-top: .2vmin solid;
+
+}
+
+nav a:hover {
+    font-style: italic;
+    color: #050505;
+    background-color: #e5e5e5;
+}
+
+nav a {
+    font-size: 7vmin;
+    background-color: #050505;
+    color: #e5e5e5;
+    text-decoration: none;
+    border-bottom: .2vmin solid;
+    text-align: right;
+    margin: 0 16% 0 0;
+    padding: 2vmin 4vmin;    
+}
+
+
+div.menu-options {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+main {
+    z-index: 1;
+    transition: transform 0.5s;
+}
+
+main.open {
+    transform: translate(100vw, 0);
+}
+
+
+
+#index main {
+    min-height: 100vh;
+    position: relative;
+    width: 100vw;
+}
+
+#index section div.slides {
+    width: 30rem;
+}
+
+/*
+#index section div.slides:hover img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1)
+}
+*/
+
+#index section div.slides img {
+    /* cursor: pointer; */
+    height: 20rem;
+    bottom: 4rem;
+    right: 5rem;
+    position: absolute;
+    /* transition: transform 0.5s, box-shadow .5s;*/
+}
+
+#index section div.slides img:first-child {
+    z-index: 1;
+} 
+
+#index section:nth-child(2) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    margin: .5rem 0 3rem 1rem;
+}    
+
+#index div.content {
+    font-size: 40vmin;
+    line-height: 1.2;
+}
+
+
+
+#tolstoy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#tolstoy header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tolstoy header h1 {
+        font-size: 2rem;
+        margin: 0 0 .5rem 0;
+}
+
+#tolstoy main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    text-align: center;
+}
+
+#tolstoy main h2 {
+        font-size: 6rem;
+        font-style: italic;
+}
+
+
+
+#tolstoy footer {
+        position: fixed;
+        bottom: 2rem;
+        left: 0;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+#tolstoy div.arrows {
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+#tolstoy svg {
+    color: black;
+    margin: 0 .2rem;
+}
+    
+#tolstoy svg:hover {
+    color: white;
+    cursor: pointer;
+}
+
